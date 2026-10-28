@@ -1,0 +1,1 @@
+Derived from the MIT-licensed ZeroHook MCP server at the commit in UPSTREAM.json. Original copyright is retained. BlurHook adds its SDK integration, configuration identity and deployment-discovery tool. Existing quote, policy and unsigned-calldata behavior remains attributed upstream. No tool holds a signing key or submits a transaction.
