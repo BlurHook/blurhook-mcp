@@ -6,10 +6,10 @@ Derived from the MIT-licensed ZeroHook MCP server. Original attribution and exac
 
 ## Install
 
-Install [v0.1.2](https://github.com/opalhook/opalhook-mcp/releases/tag/v0.1.2) from GitHub in your project. Use Node 22.13 or newer.
+Install [v0.1.3](https://github.com/opalhook/opalhook-mcp/releases/tag/v0.1.3) from GitHub in your project. Use Node 22.13 or newer.
 
 ```sh
-npm install https://github.com/opalhook/opalhook-mcp/releases/download/v0.1.2/opalhook-mcp-0.1.2.tgz
+npm install https://github.com/opalhook/opalhook-mcp/releases/download/v0.1.3/opalhook-mcp-0.1.3.tgz
 ```
 
 The package name is `@opalhook/mcp`. The package is unpublished on the npm registry.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Report the package version in the MCP handshake and startup log.
+
 ## 0.1.2
 
 - Distribute the MCP server as `@opalhook/mcp` and pin the OpalHook SDK GitHub tarball.

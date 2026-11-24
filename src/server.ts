@@ -1,6 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { MAX_SLIPPAGE_BPS, OPALHOOK_DEPLOYMENT } from "@opalhook/sdk";
 import { z } from "zod";
+import { version } from "../package.json";
 import type { Deps } from "./engine.js";
 import { buildSwapHandler } from "./tools/buildSwap.js";
 import { run } from "./tools/errors.js";
@@ -11,7 +12,7 @@ import { quoteHandler } from "./tools/quote.js";
 import { simulateHandler } from "./tools/simulate.js";
 
 export const SERVER_NAME = "opalhook-mcp";
-export const SERVER_VERSION = "0.1.1";
+export const SERVER_VERSION = version;
 
 const token = z
   .string()
