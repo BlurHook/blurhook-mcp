@@ -3,8 +3,8 @@
   "commit": "423a3a8710b8b23eaca10079a868f6b0111ce146",
   "license": "MIT",
   "changes": [
-    "BlurHook SDK integration",
-    "BlurHook-specific config, CLI and server identity",
-    "Read-only BlurHook deployment tool and privacy-scope response"
+    "OpalHook SDK integration",
+    "OpalHook-specific config, CLI and server identity",
+    "Read-only OpalHook deployment tool and privacy-scope response"
   ]
 }
