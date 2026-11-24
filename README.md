@@ -4,6 +4,18 @@ An MCP server for Robinhood Chain trading agents. It provides quotes, policy-che
 
 Derived from the MIT-licensed ZeroHook MCP server. Original attribution and exact upstream revision are retained in LICENSE, NOTICE and UPSTREAM.json. OpalHook adds its own SDK integration, configuration/server identity and a read-only deployment-discovery tool.
 
+## Install
+
+Install [v0.1.1](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.1) from GitHub in your project. Use Node 22.13 or newer.
+
+```sh
+npm install https://github.com/BlurHook/blurhook-mcp/releases/download/v0.1.1/blurhook-mcp-0.1.1.tgz
+```
+
+The package name is `@blurhook/mcp`. The package is unpublished on the npm registry.
+
+Set your MCP client’s stdio command to the absolute path to `node_modules/.bin/opalhook-mcp` in that project. Protocol JSON-RPC stays on stdout, and logs go to stderr.
+
 ## Build and connect
 
 Node 22.13 or newer. The OpalHook SDK dependency is a pinned built GitHub release asset; no sibling checkout is needed.
@@ -18,7 +30,7 @@ npm test
 npm start
 ```
 
-Configure your MCP client to run `node /absolute/path/to/opalhook-mcp/dist/index.js` using stdio. Protocol JSON-RPC stays on stdout; logs go to stderr. The library package is not claimed to be published in the npm registry.
+When running from a source checkout, configure your MCP client to run `node /absolute/path/to/opalhook-mcp/dist/index.js` using stdio.
 
 ## Tools
 
@@ -42,6 +54,6 @@ This server builds public swaps only. Private spending uses the OpalHook app, a 
 
 ## Compatibility
 
-The first public release shipped on **28 October 2026** as `v0.1.0` under the BlurHook name. The OpalHook rebrand followed on **24 November 2026**. The original GitHub release is available for integrations that use it. Build from current source to use the OpalHook names in this README. The current source version is `v0.1.1` and is not published as a GitHub release or npm registry package. The repository URL and `@blurhook/*` package identifiers still work.
+The first public release shipped on **28 October 2026** as `v0.1.0` under the BlurHook name. The OpalHook rebrand followed on **24 November 2026**. The [original v0.1.0 release](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.0) remains available for existing integrations. The repository URL and `@blurhook/*` package identifiers still work.
 
 The `opalhook-mcp` and `blurhook-mcp` commands start the same server. `OPALHOOK_*` environment variables take precedence over matching `BLURHOOK_*` variables. Both `opalhook_deployment` and the legacy `blurhook_deployment` tool return the same deployed-contract directory. The pinned v0.1.0 SDK dependency remains supported.
