@@ -16,4 +16,4 @@
 
 ## 0.1.0 — 28 October 2026
 
-Original public release under the BlurHook name. The original tag and release assets remain unchanged.
+First public release. See the [original release notes](https://github.com/opalhook/opalhook-mcp/releases/tag/v0.1.0) and the [migration guide](https://github.com/opalhook/opalhook-mcp/blob/main/MIGRATION.md) for the original package name.
