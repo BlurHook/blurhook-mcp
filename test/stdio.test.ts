@@ -17,9 +17,10 @@ describe.skipIf(!existsSync(entry))("stdio", () => {
     const client = new Client({ name: "stdio-test", version: "0.0.0" });
     await client.connect(transport);
     const { tools } = await client.listTools();
-    expect(tools).toHaveLength(9);
+    expect(tools).toHaveLength(10);
+    expect(tools.map(tool => tool.name)).toEqual(expect.arrayContaining(["opalhook_deployment", "blurhook_deployment"]));
     await client.close();
-    expect(stderr).toContain("[blurhook-mcp]");
+    expect(stderr).toContain("[opalhook-mcp]");
     expect(stderr).toContain("ready");
   });
 });
