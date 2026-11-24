@@ -1,4 +1,4 @@
-import { feeLabel } from "@blurhook/sdk";
+import { feeLabel } from "@opalhook/sdk";
 import type { Deps } from "../engine.js";
 
 export interface ListHookPoolsArgs {

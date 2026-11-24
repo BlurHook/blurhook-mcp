@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { createBlurHook } from "@blurhook/sdk";
+import { createOpalHook } from "@opalhook/sdk";
 import { loadConfig } from "./config.js";
 import { log } from "./log.js";
 import { SpendLedger } from "./policy.js";
@@ -8,7 +8,7 @@ import { createServer, SERVER_VERSION } from "./server.js";
 
 async function main(): Promise<void> {
   const config = loadConfig();
-  const zhook = createBlurHook({
+  const zhook = createOpalHook({
     ...(config.rpcUrls.length ? { rpcUrls: config.rpcUrls } : {}),
     ...(config.pools.length ? { pools: config.pools } : {}),
   });

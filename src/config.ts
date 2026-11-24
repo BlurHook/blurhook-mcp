@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { inputToRow, type PoolRow } from "@blurhook/sdk";
+import { inputToRow, type PoolRow } from "@opalhook/sdk";
 import { DEFAULT_POLICY, parsePolicy, type Policy } from "./policy.js";
 
 export interface Config {

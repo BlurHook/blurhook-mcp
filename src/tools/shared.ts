@@ -1,4 +1,4 @@
-import { NATIVE, type QuoteResponse, type Hop } from "@blurhook/sdk";
+import { NATIVE, type QuoteResponse, type Hop } from "@opalhook/sdk";
 import type { Deps } from "../engine.js";
 import { onAllowlist } from "../policy.js";
 
