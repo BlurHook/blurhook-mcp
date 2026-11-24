@@ -40,6 +40,7 @@ describe("tools", () => {
     expect(isError).toBe(false);
     expect(body).toMatchObject({chainId:4663,privateSpendingSupported:false,deployment:{adapter:"0x1A184f25cc0C032fD6f6701eE4F1DCE359705715"}});
     expect(body.approvalPolicy).toContain("operator review");
+    expect(await call("opalhook_deployment")).toEqual({isError,body});
   });
   it("registers exactly the read-only and calldata tools", async () => {
     const { client } = await connect();
@@ -47,6 +48,7 @@ describe("tools", () => {
     expect(tools.map((t) => t.name).sort()).toEqual(
       [
         "blurhook_deployment",
+        "opalhook_deployment",
         "build_swap",
         "hook_passport",
         "list_hook_pools",
