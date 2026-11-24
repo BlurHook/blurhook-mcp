@@ -29,6 +29,12 @@ const readJson = (path: string, what: string): unknown => {
  *  - BLURHOOK_DISCOVER_BLOCKS: scan this many recent blocks for new pools at start (0 = off)
  */
 export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
+  // Prefer the new prefix; retain existing deployments without changing policy.
+  env = { ...env };
+  for (const key of ['RPC_URLS','POLICY_FILE','POLICY','LEDGER_FILE','POOLS_FILE','DISCOVER_BLOCKS']) {
+    env['BLURHOOK_' + key] = env['OPALHOOK_' + key] ?? env['BLURHOOK_' + key];
+  }
+
   const rpcUrls = (env.BLURHOOK_RPC_URLS ?? "")
     .split(",")
     .map((s) => s.trim())

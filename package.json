@@ -1,9 +1,9 @@
 {
   "name": "@blurhook/mcp",
-  "version": "0.1.0",
-  "description": "BlurHook MCP server: policy-checked public swap calldata, simulation and deployed-contract discovery.",
+  "version": "0.1.1",
+  "description": "OpalHook MCP server: policy-checked public swap calldata, simulation and deployed-contract discovery.",
   "license": "MIT",
-  "author": "BlurHook",
+  "author": "OpalHook",
   "type": "module",
   "homepage": "https://github.com/BlurHook/blurhook-mcp",
   "repository": {
@@ -24,14 +24,16 @@
     "spending-policy"
   ],
   "bin": {
-    "blurhook-mcp": "dist/index.js"
+    "blurhook-mcp": "dist/index.js",
+    "opalhook-mcp": "dist/index.js"
   },
   "files": [
     "dist",
     "README.md",
     "LICENSE",
     "NOTICE",
-    "UPSTREAM.json"
+    "UPSTREAM.json",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": ">=20"

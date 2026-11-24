@@ -10,8 +10,8 @@ import { spendingPolicyHandler } from "./tools/policy.js";
 import { quoteHandler } from "./tools/quote.js";
 import { simulateHandler } from "./tools/simulate.js";
 
-export const SERVER_NAME = "blurhook-mcp";
-export const SERVER_VERSION = "0.1.0";
+export const SERVER_NAME = "opalhook-mcp";
+export const SERVER_VERSION = "0.1.1";
 
 const token = z
   .string()
@@ -31,7 +31,7 @@ const slippage = z
   .describe("Slippage in basis points. Defaults to the policy maximum; above it the trade is refused.");
 
 /**
- * Builds the MCP server with every BlurHook tool registered. Transport wiring lives in index.ts so tests can connect
+ * Builds the MCP server with every OpalHook tool registered. Transport wiring lives in index.ts so tests can connect
  * an in-memory client. Read-only: no tool holds a key, signs or sends.
  */
 export function createServer(deps: Deps): McpServer {
@@ -43,7 +43,7 @@ export function createServer(deps: Deps): McpServer {
     },
   );
 
-  server.registerTool("blurhook_deployment", {title:"BlurHook deployed privacy infrastructure",description:"Read BlurHook contract addresses and privacy scope on Robinhood Chain. This tool does not construct private proofs or authorize deposits.",inputSchema:{},annotations:{readOnlyHint:true,openWorldHint:false}},async()=>({content:[{type:"text",text:JSON.stringify({chainId:4663,deployment:BLURHOOK_DEPLOYMENT,contractsSource:"https://github.com/BlurHook/blurhook-contracts",approvalPolicy:"BlurHook operator review; not 0xbow screening",privateSpendingSupported:false,note:"This server builds public swap calldata only. Private spending uses the BlurHook app and a local note vault."})}]}));
+  for (const name of ["opalhook_deployment", "blurhook_deployment"]) server.registerTool(name, {title:"OpalHook deployed privacy infrastructure",description:"Read OpalHook contract addresses and privacy scope on Robinhood Chain. This tool does not construct private proofs or authorize deposits.",inputSchema:{},annotations:{readOnlyHint:true,openWorldHint:false}},async()=>({content:[{type:"text",text:JSON.stringify({chainId:4663,deployment:BLURHOOK_DEPLOYMENT,explorer:"https://robinhoodchain.blockscout.com/",approvalPolicy:"OpalHook operator review; not 0xbow screening",privateSpendingSupported:false,note:"This server builds public swap calldata only. Private spending uses the OpalHook app and a local note vault."})}]}));
 
   server.registerTool(
     "quote",
