@@ -54,6 +54,4 @@ This server builds public swaps only. Private spending uses the OpalHook app, a 
 
 ## Compatibility
 
-The first public release shipped on **28 October 2026** as `v0.1.0` under the BlurHook name. The OpalHook rebrand followed on **24 November 2026**. The [original v0.1.0 release](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.0) remains available for existing integrations. The [v0.1.1 release](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.1) also retains the `@blurhook/mcp` package name. The new tarball installs as `@opalhook/mcp`.
-
-The `opalhook-mcp` and `blurhook-mcp` commands start the same server. `OPALHOOK_*` environment variables take precedence over matching `BLURHOOK_*` variables. Both `opalhook_deployment` and the legacy `blurhook_deployment` tool return the same deployed-contract directory. This release pins the `@opalhook/sdk` v0.1.2 GitHub tarball.
+See the [migration guide](https://github.com/opalhook/opalhook-mcp/blob/main/MIGRATION.md) for earlier releases and supported aliases.
