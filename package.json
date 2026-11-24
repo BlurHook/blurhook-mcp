@@ -1,17 +1,17 @@
 {
-  "name": "@blurhook/mcp",
-  "version": "0.1.1",
+  "name": "@opalhook/mcp",
+  "version": "0.1.2",
   "description": "OpalHook MCP server: policy-checked public swap calldata, simulation and deployed-contract discovery.",
   "license": "MIT",
   "author": "OpalHook",
   "type": "module",
-  "homepage": "https://github.com/BlurHook/blurhook-mcp",
+  "homepage": "https://github.com/opalhook/opalhook-mcp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BlurHook/blurhook-mcp.git"
+    "url": "git+https://github.com/opalhook/opalhook-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/BlurHook/blurhook-mcp/issues"
+    "url": "https://github.com/opalhook/opalhook-mcp/issues"
   },
   "keywords": [
     "zerohook",
@@ -48,7 +48,7 @@
     "@modelcontextprotocol/sdk": "1.29.0",
     "viem": "2.57.11",
     "zod": "4.4.3",
-    "@blurhook/sdk": "https://github.com/BlurHook/blurhook-sdk/releases/download/v0.1.0/blurhook-sdk-0.1.0.tgz"
+    "@opalhook/sdk": "https://github.com/opalhook/opalhook-sdk/releases/download/v0.1.2/opalhook-sdk-0.1.2.tgz"
   },
   "devDependencies": {
     "@types/node": "24.10.1",

@@ -6,13 +6,13 @@ Derived from the MIT-licensed ZeroHook MCP server. Original attribution and exac
 
 ## Install
 
-Install [v0.1.1](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.1) from GitHub in your project. Use Node 22.13 or newer.
+Install [v0.1.2](https://github.com/opalhook/opalhook-mcp/releases/tag/v0.1.2) from GitHub in your project. Use Node 22.13 or newer.
 
 ```sh
-npm install https://github.com/BlurHook/blurhook-mcp/releases/download/v0.1.1/blurhook-mcp-0.1.1.tgz
+npm install https://github.com/opalhook/opalhook-mcp/releases/download/v0.1.2/opalhook-mcp-0.1.2.tgz
 ```
 
-The package name is `@blurhook/mcp`. The package is unpublished on the npm registry.
+The package name is `@opalhook/mcp`. The package is unpublished on the npm registry.
 
 Set your MCP client’s stdio command to the absolute path to `node_modules/.bin/opalhook-mcp` in that project. Protocol JSON-RPC stays on stdout, and logs go to stderr.
 
@@ -21,7 +21,7 @@ Set your MCP client’s stdio command to the absolute path to `node_modules/.bin
 Node 22.13 or newer. The OpalHook SDK dependency is a pinned built GitHub release asset; no sibling checkout is needed.
 
 ```sh
-git clone https://github.com/BlurHook/blurhook-mcp.git opalhook-mcp
+git clone https://github.com/opalhook/opalhook-mcp.git opalhook-mcp
 cd opalhook-mcp
 npm ci --ignore-scripts
 npm run typecheck
@@ -54,6 +54,6 @@ This server builds public swaps only. Private spending uses the OpalHook app, a 
 
 ## Compatibility
 
-The first public release shipped on **28 October 2026** as `v0.1.0` under the BlurHook name. The OpalHook rebrand followed on **24 November 2026**. The [original v0.1.0 release](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.0) remains available for existing integrations. The repository URL and `@blurhook/*` package identifiers still work.
+The first public release shipped on **28 October 2026** as `v0.1.0` under the BlurHook name. The OpalHook rebrand followed on **24 November 2026**. The [original v0.1.0 release](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.0) remains available for existing integrations. The [v0.1.1 release](https://github.com/BlurHook/blurhook-mcp/releases/tag/v0.1.1) also retains the `@blurhook/mcp` package name. The new tarball installs as `@opalhook/mcp`.
 
-The `opalhook-mcp` and `blurhook-mcp` commands start the same server. `OPALHOOK_*` environment variables take precedence over matching `BLURHOOK_*` variables. Both `opalhook_deployment` and the legacy `blurhook_deployment` tool return the same deployed-contract directory. The pinned v0.1.0 SDK dependency remains supported.
+The `opalhook-mcp` and `blurhook-mcp` commands start the same server. `OPALHOOK_*` environment variables take precedence over matching `BLURHOOK_*` variables. Both `opalhook_deployment` and the legacy `blurhook_deployment` tool return the same deployed-contract directory. This release pins the `@opalhook/sdk` v0.1.2 GitHub tarball.

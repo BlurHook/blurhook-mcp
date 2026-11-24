@@ -1,5 +1,5 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { MAX_SLIPPAGE_BPS, BLURHOOK_DEPLOYMENT } from "@blurhook/sdk";
+import { MAX_SLIPPAGE_BPS, OPALHOOK_DEPLOYMENT } from "@opalhook/sdk";
 import { z } from "zod";
 import type { Deps } from "./engine.js";
 import { buildSwapHandler } from "./tools/buildSwap.js";
@@ -43,7 +43,7 @@ export function createServer(deps: Deps): McpServer {
     },
   );
 
-  for (const name of ["opalhook_deployment", "blurhook_deployment"]) server.registerTool(name, {title:"OpalHook deployed privacy infrastructure",description:"Read OpalHook contract addresses and privacy scope on Robinhood Chain. This tool does not construct private proofs or authorize deposits.",inputSchema:{},annotations:{readOnlyHint:true,openWorldHint:false}},async()=>({content:[{type:"text",text:JSON.stringify({chainId:4663,deployment:BLURHOOK_DEPLOYMENT,explorer:"https://robinhoodchain.blockscout.com/",approvalPolicy:"OpalHook operator review; not 0xbow screening",privateSpendingSupported:false,note:"This server builds public swap calldata only. Private spending uses the OpalHook app and a local note vault."})}]}));
+  for (const name of ["opalhook_deployment", "blurhook_deployment"]) server.registerTool(name, {title:"OpalHook deployed privacy infrastructure",description:"Read OpalHook contract addresses and privacy scope on Robinhood Chain. This tool does not construct private proofs or authorize deposits.",inputSchema:{},annotations:{readOnlyHint:true,openWorldHint:false}},async()=>({content:[{type:"text",text:JSON.stringify({chainId:4663,deployment:OPALHOOK_DEPLOYMENT,explorer:"https://robinhoodchain.blockscout.com/",approvalPolicy:"OpalHook operator review; not 0xbow screening",privateSpendingSupported:false,note:"This server builds public swap calldata only. Private spending uses the OpalHook app and a local note vault."})}]}));
 
   server.registerTool(
     "quote",
